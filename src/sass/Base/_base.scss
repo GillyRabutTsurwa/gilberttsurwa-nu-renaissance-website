@@ -1,0 +1,96 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	position: relative;
+	background-color: #000;
+}
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+}
+
+.main-content {
+	opacity: 0;
+	display: none;
+	-webkit-transition: opacity 2.0s ease-in;
+	transition: opacity 2.0s ease-in;
+}
+
+.body__container {
+	display: grid;
+
+	grid-template-rows: 100vh -webkit-min-content repeat(4, -webkit-min-content);
+	grid-template-rows: 100vh min-content repeat(4, min-content);
+
+	grid-template-columns: [full-start] minmax(6rem, 1fr) [centre-start]
+		repeat(8, minmax(-webkit-min-content, 14rem)) [centre-end] minmax(6rem, 1fr) [full-end];
+	grid-template-columns: [full-start] minmax(6rem, 1fr) [centre-start]
+		repeat(8, minmax(min-content, 14rem)) [centre-end] minmax(6rem, 1fr) [full-end];
+}
+
+// move me pleasss
+.testimonials {
+	position: relative; //TEMPORARY
+	height: 80vh;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))),
+		url(../img/clothes-on-rack.jpeg);
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+		url(../img/clothes-on-rack.jpeg);
+	grid-column: full-start / full-end;
+
+	&__temporary {
+		position: absolute;
+		top: 50%;
+		left: 55%;
+		-webkit-transform: translate(-50%, 50%);
+		transform: translate(-50%, -50%);
+		font-size: 8rem;
+		color: rgb(238, 238, 238);
+	}
+}
+
+.carousel__container {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	overflow: hidden;
+
+	.carousel__track {
+		position: relative;
+		width: 75%;
+		height: 80%;
+		background-color: cornflowerblue;
+
+		li {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			width: 100%;
+			height: 50%;
+		}
+	}
+}

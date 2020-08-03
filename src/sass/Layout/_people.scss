@@ -1,0 +1,23 @@
+.people {
+	background-color: #f9f7f6;
+	grid-column: full-start / full-end;
+	display: grid;
+	justify-items: center;
+
+	grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+	gap: 7rem;
+	padding-bottom: 5rem;
+
+	&__title {
+		font-size: 3rem;
+		grid-column: 1 / -1;
+		align-self: center;
+		justify-self: center;
+	}
+
+	&__card {
+		&:nth-of-type(4) {
+			grid-column: 2 / 3;
+		}
+	}
+}

@@ -1,0 +1,45 @@
+.intro {
+	background-color: #f9f7f6;
+	grid-column: full-start / full-end;
+
+	display: grid;
+	grid-template-columns: repeat(2, minmax(50%, 1fr));
+	row-gap: 5rem;
+
+	padding: 4rem 0;
+
+	position: relative;
+
+	&__title {
+		font-size: 7rem;
+		-ms-flex-item-align: center;
+		align-self: center;
+		justify-self: center;
+
+		opacity: 0;
+
+		-webkit-transition: all 0.2s ease-in;
+		transition: all 0.2s ease-in;
+	}
+
+	&__paragraph {
+		font-size: 3rem;
+		font-family: Jost, sans-serif;
+		font-weight: 300;
+		line-height: 1.5;
+		opacity: 0;
+		-webkit-transition: all 0.2s 0.5s ease-in;
+		transition: all 0.2s 0.5s ease-in;
+	}
+
+	.highlight {
+		font-weight: 700;
+		-webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+		box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+	}
+}
+
+// DYNAMIC CLASSES
+.appear {
+	opacity: 1;
+}
